@@ -1,0 +1,19 @@
+{
+  "name": "zk_merkle_tree_case_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.2",
+    "circom": "^0.5.46",
+    "circomlibjs": "^0.1.7",
+    "hardhat": "^2.16.0",
+    "snarkjs": "^0.6.10"
+  }
+}
