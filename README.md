@@ -17,8 +17,13 @@ snarkjs plonk setup build/merkle_tree.r1cs build/pot16_final.ptau build/merkle_t
 snarkjs zkey export solidityverifier build/merkle_tree.zkey ../contracts/Verifier.sol
 ```
 
-A test script(`test/test.ts`) to verify a address is in the set of merkle leave nodes.
+A test script(`test/test.ts`) to verify that certain addreess is in the set of addresses
 Each leave node is hash(secret, address), and we use '123' as secret.
 ```shell
+// install npm package
+npm install
+// compile the contract
+npx hardhat compile
+// test verifys
 npx hardhat test
 ```

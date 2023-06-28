@@ -15,8 +15,10 @@ const addrCollection = [
   "0xd99cEbf3C817D7360F46ED055194034d63C255E3"
 ]
 
-const wasmFilePath = "/Users/daniel/Code/04_zk/zk_merkle_tree_case_2/circuits/build/merkle_tree_js/merkle_tree.wasm";
-const zkeyFilePath = "/Users/daniel/Code/04_zk/zk_merkle_tree_case_2/circuits/build/merkle_tree.zkey";
+const wasmFilePath = "./circuits/build/merkle_tree_js/merkle_tree.wasm";
+const zkeyFilePath = "./circuits/build/merkle_tree.zkey";
+// from msg.sender, but other address can be used
+const address = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266";
 
 /*
   Calculate the merkle proof for a given address, to prove this address belongs to the address set
@@ -25,9 +27,6 @@ const zkeyFilePath = "/Users/daniel/Code/04_zk/zk_merkle_tree_case_2/circuits/bu
   3. generate the proof calldata
  */
 export async function calculateMerkleProof(mainAddr: string) {
-  // from msg.sender, but other address can be used
-  const address = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266";
-
   // the merkle tree leaves
   const mtLeaves: BigInt[] = [];
   for (let i = 0; i < addrCollection.length; i++) {
